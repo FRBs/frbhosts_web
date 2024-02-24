@@ -26,7 +26,7 @@ const Main = () => {
     const config = {
       headers: { "content-type": "application/json" },
     };
-    Axios.get("http://127.0.0.1:8000/get-github-catlogs", {}, config)
+    Axios.get("https://frb-hosts.org/get-github-catlogs", {}, config)
       .then((response) => {
         console.log(response.data);
         setData(response.data);
