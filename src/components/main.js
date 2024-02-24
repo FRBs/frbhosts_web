@@ -26,7 +26,7 @@ const Main = () => {
     const config = {
       headers: { "content-type": "application/json" },
     };
-    Axios.get("https://frb-hosts.org/get-github-catlogs", {}, config)
+    Axios.get("https://api.frb-hosts.org/get-github-catlogs", {}, config)
       .then((response) => {
         console.log(response.data);
         setData(response.data);
