@@ -45,7 +45,7 @@ const Details = (props) => {
                 TNS
               </a>
               <a className="btn-danger  btn-lg btn rounded shadow w-100" href={link} target="_blank">
-                Link 2
+                PanSTARRS
               </a>
             </div>
             <div className="w-100 pt-2 d-flex justify-content-between">
