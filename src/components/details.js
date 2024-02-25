@@ -9,7 +9,7 @@ const Details = (props) => {
   var modifiedUrl = originalUrl.replace("github.com", "raw.githubusercontent.com");
 
   // Links start
-  var decl = (props.data["Host Decl."].includes('-'))? props.data["Host Decl."] : "+"+props.data["Host Decl."];
+  let decl = (props.data["Host Decl."].includes('-'))? props.data["Host Decl."] : "+"+props.data["Host Decl."];
   var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${decl}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
   
   // Remove "/blob" from the path
