@@ -211,7 +211,7 @@ const Main = () => {
                 Welcome to the FRB Host Galaxy Catalog! Here you will find a complete and up-to-date listing of FRB host galaxies along with their inferred host galaxy properties. The data below is generated from JSON files produced via the <a href="https://github.com/FRBs/FRB">FRB git repo</a> and is intended to be a community-driven resource for the entire FRB community. If you have discovered a new FRB host, please open a pull request to add your FRB to the catalog.
               </p>
               <p className="lead">
-                This page is maintained by the <a href="https://frb-f4.org/">Fast and Fortunate for FRB Follow-up</a> team. If you notice any issues or have suggestions for features you would like to see added, please <a href = "mailto: teftekhari@northwestern.edu?subject=FRB Hosts Website">let us know</a>.
+                This page is maintained by the <a href="https://frb-f4.org/">Fast and Fortunate for FRB Follow-up</a> team. If you notice any issues or have suggestions for features you would like to see added, please open a git issue <a href="https://github.com/FRBs/frbhosts_web" target="_blank">here</a>.
               </p>
             </div>
 
