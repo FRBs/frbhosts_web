@@ -7,6 +7,8 @@ const Details = (props) => {
 
   // Links start
   var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
+  var frb_split = {props.data.FRB}.split('FRB');
+  var link_tns = `https://www.wis-tns.org/object/${frb_split[0]}`;
   
   // Remove "/blob" from the path
   modifiedUrl = modifiedUrl.replace("/blob", "");
@@ -39,8 +41,8 @@ const Details = (props) => {
             <img className="shadow rounded" src={modifiedUrl} style={{ height: "500px", width: "100%", objectFit: "contain" }} loading="lazy" />
 
             <div className="w-100 pt-4 d-flex justify-content-between">
-              <a className="btn-info btn-lg btn rounded shadow me-2 w-100" href={link} target="_blank">
-                Link 1
+              <a className="btn-info btn-lg btn rounded shadow me-2 w-100" href={link_tns} target="_blank">
+                TNS
               </a>
               <a className="btn-danger  btn-lg btn rounded shadow w-100" href={link} target="_blank">
                 Link 2
