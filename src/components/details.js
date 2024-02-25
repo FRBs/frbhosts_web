@@ -39,7 +39,7 @@ const Details = (props) => {
             <img className="shadow rounded" src={modifiedUrl} style={{ height: "500px", width: "100%", objectFit: "contain" }} loading="lazy" />
 
             <div className="w-100 pt-4 d-flex justify-content-between">
-              <a className="btn-info btn-lg btn rounded shadow me-2 w-100" href={link_tns} target="_blank">
+              <a className="btn-info btn-lg btn rounded shadow me-2 w-100" href={link} target="_blank">
                 Link 1
               </a>
               <a className="btn-danger  btn-lg btn rounded shadow w-100" href={link} target="_blank">
