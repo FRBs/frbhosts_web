@@ -193,7 +193,7 @@ const Main = () => {
         <>
           <div className="hero" style={{ backgroundSize: scrollY + 100 + "%" }}>
             <div class="logo">
-              <h3 className="fw-bold display-6 text-light">LOGO</h3>
+              <h3 className="fw-bold display-6 text-light">FRB Host Galaxy Catalog</h3>
               <div id="container-stars">
                 <div id="stars"></div>
               </div>
