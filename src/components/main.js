@@ -208,15 +208,10 @@ const Main = () => {
           <div className="container bg-dark rounded p-3 my-3 ">
             <div className="text-light my-3">
               <p className="lead">
-                Welcome to the Open Tidal Disruption Event (TDE) Catalog! This catalog is intended to be a “catch-all” list of possible TDEs that have been claimed over the years in the literature,
-                even for events in which the favored interpretation is not a tidal disruption. The catalog is a continual work in progress, and is likely missing a few events and may have a few
-                mistakes. The list of TDEs available here is scraped from various data repositories and individual publications. If you use this data, please reference the cited sources of that data,
-                and we'd also appreciate if you provided a link to this catalog. Thanks!
+                Welcome to the FRB Host Galaxy Catalog! Here you will find a complete and up-to-date listing of FRB host galaxies along with their inferred host galaxy properties. The data below is generated from JSON files produced via the <a href="https://github.com/FRBs/FRB">FRB git repo</a> and is intended to be a community-driven resource for the entire FRB community. If you have discovered a new FRB host, please open a pull request to add your FRB to the catalog.
               </p>
               <p className="lead">
-                The table below is generated from JSON files produced by AstroCats, which agglomerates the data for each TDE as a series of JSON files that all adhere to the same schema. The entirety
-                of the data available for any TDE can be downloaded by clicking the icon in the Data column. Advanced data retrieval options are available via the OACAPI. If you would like to
-                contribute data yourself, please visit our contribute page. If you spot any mistakes, please create a new issue on our GitHub issue tracking page, or contact us via e-mail.
+                This page is maintained by the <a href="https://frb-f4.org/">Fast and Fortunate for FRB Follow-up</a> team. If you notice any issues or have suggestions for features you would like to see added, please <a href = "mailto: teftekhari@northwestern.edu?subject=FRB Hosts Website">let us know</a>.
               </p>
             </div>
 
