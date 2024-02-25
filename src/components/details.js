@@ -7,9 +7,7 @@ const Details = (props) => {
 
   // Links start
   var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
-  var split_frb_name = props.data.frb.split('FRB');
-  var link_tns = `https://www.wis-tns.org/object/${split_frb_name[1]}`;
-
+  
   // Remove "/blob" from the path
   modifiedUrl = modifiedUrl.replace("/blob", "");
   return (
