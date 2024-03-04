@@ -50,14 +50,6 @@ const Details = (props) => {
                 PanSTARRS
               </a>
             </div>
-            <div className="w-100 pt-2 d-flex justify-content-between">
-              <a className="btn-dark btn-lg btn rounded shadow me-2 w-100" href={link} target="_blank">
-                Link 3
-              </a>
-              <a className="btn-warning btn-lg btn rounded shadow w-100" href={link} target="_blank">
-                Link 4
-              </a>
-            </div>
           </div>
         </div>
 
