@@ -10,7 +10,7 @@ const Details = (props) => {
 
   // Links start
   var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
-  var tns_link = `https://www.wis-tns.org/object/${{props.data.FRB}.split('FRB')[1]}`;
+  var tns_link = `https://www.wis-tns.org/object/${props.data.FRB}`;
 
   // Remove "/blob" from the path
   modifiedUrl = modifiedUrl.replace("/blob", "");
@@ -36,7 +36,7 @@ const Details = (props) => {
             <h4 className="text-dark mt-2">Redshift</h4>
             <p className="text-danger text-lead fs-5">{props.data.redshift}</p>
 
-            <h4 className="text-dark mt-2">Offset</h4>
+            <h4 className="text-dark mt-2">Offset [arcsec]</h4>
             <p className="text-danger text-lead fs-5">{props.data["Offset ($\u0007rcsec$)"]}</p>
           </div>
           <div className="col-5">
