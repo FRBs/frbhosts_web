@@ -6,7 +6,7 @@ const Details = (props) => {
   // Replace "github.com" with "raw.githubusercontent.com"
   var originalUrl = props.data.image;
   var modifiedUrl = originalUrl.replace("github.com", "raw.githubusercontent.com");
-  decl = (props.data["Host Decl."].includes('-'))? props.data["Host Decl."] : "+"+props.data["Host Decl."];
+  decl = props.data["Host Decl."].includes('-')? props.data["Host Decl."] : "+"+props.data["Host Decl."];
 
   // Links start
   
@@ -31,7 +31,7 @@ const Details = (props) => {
 
             <h4 className="text-dark mt-2">R.A./Decl (2000) </h4>
             <p className="text-secondary text-lead fs-5">
-              {props.data["Host R.A."]}/{decl}
+              {props.data["Host R.A."]}/{(decl)}
             </p>
 
             <h4 className="text-dark mt-2">Redshift</h4>
@@ -70,7 +70,7 @@ const Details = (props) => {
               <h4 className="text-dark ">
                 <LatexComponent text="$M_*$ ($\rm M_{\odot}$)" />
               </h4>
-              <p className="text-secondary text-lead fs-5">{props.data["$M_*$ ($\rm M_{\\odot}$)"].toExponential()}</p>
+              <p className="text-secondary text-lead fs-5">{(props.data["$M_*$ ($\rm M_{\\odot}$)"]).toExponential()}</p>
             </div>
 
             <div className="w-100 me-2 mb-3">
