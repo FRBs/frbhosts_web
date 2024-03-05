@@ -73,7 +73,7 @@ const Details = (props) => {
               <h4 className="text-dark ">
                 <LatexComponent text="$M_*$ ($\rm M_{\odot}$)" />
               </h4>
-              <p className="text-secondary text-lead fs-5">{(props.data["$M_*$ ($\rm M_{\\odot}$)"])}.toExponential()</p>
+              <p className="text-secondary text-lead fs-5">{props.data["$M_*$ ($\rm M_{\\odot}$)"].toExponential()}</p>
             </div>
 
             <div className="w-100 me-2 mb-3">
