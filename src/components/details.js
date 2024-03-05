@@ -1,7 +1,7 @@
 import React from "react";
 import LatexComponent from "./latex";
 
-var decl = '(props.data["Host Decl."].includes('-'))? props.data["Host Decl."] : "+"+props.data["Host Decl."]';
+var decl = (props.data["Host Decl."].includes('-'))? props.data["Host Decl."] : "+"+props.data["Host Decl."];
 
 const Details = (props) => {
   // Replace "github.com" with "raw.githubusercontent.com"
