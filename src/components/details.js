@@ -10,7 +10,7 @@ const Details = (props) => {
 
   // Links start
   
-  var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${(props.data["Host Decl."].includes('-'))? props.data["Host Decl."] : "+"+props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
+  var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
   var tns_link = `https://www.wis-tns.org/object/${props.data.FRB.split('FRB')[1]}`;
 
   // Remove "/blob" from the path
@@ -30,15 +30,15 @@ const Details = (props) => {
             <h3 className="text-dark display-6 fw-bold pb-4">{props.data.FRB}</h3>
 
             <h4 className="text-dark mt-2">R.A./Decl (2000) </h4>
-            <p className="text-danger text-lead fs-5">
+            <p className="text-secondary text-lead fs-5">
               {props.data["Host R.A."]}/{props.data["Host Decl."]}
             </p>
 
             <h4 className="text-dark mt-2">Redshift</h4>
-            <p className="text-danger text-lead fs-5">{props.data.redshift}</p>
+            <p className="text-secondary text-lead fs-5">{props.data.redshift}</p>
 
             <h4 className="text-dark mt-2">Offset [arcsec]</h4>
-            <p className="text-danger text-lead fs-5">{props.data["Offset ($\u0007rcsec$)"]}</p>
+            <p className="text-secondary text-lead fs-5">{props.data["Offset ($\u0007rcsec$)"]}</p>
           </div>
           <div className="col-5">
             <img className="shadow rounded" src={modifiedUrl} style={{ height: "500px", width: "100%", objectFit: "contain" }} loading="lazy" />
@@ -63,35 +63,35 @@ const Details = (props) => {
               <h4 className="text-dark ">
                 <LatexComponent text="$m_r$" />
               </h4>
-              <p className="text-danger text-lead fs-5">{props.data["$m_r$."]}</p>
+              <p className="text-secondary text-lead fs-5">{props.data["$m_r$."]}</p>
             </div>
 
             <div className="w-100 me-2 mb-3">
               <h4 className="text-dark ">
                 <LatexComponent text="$M_*$ ($\rm M_{\odot}$)" />
               </h4>
-              <p className="text-danger text-lead fs-5">{props.data["$M_*$ ($\rm M_{\\odot}$)"]}</p>
+              <p className="text-secondary text-lead fs-5">{props.data["$M_*$ ($\rm M_{\\odot}$)"]}</p>
             </div>
 
             <div className="w-100 me-2 mb-3">
               <h4 className="text-dark ">
                 <LatexComponent text="SFR ($\rm M_{\odot}$/yr)" />
               </h4>
-              <p className="text-danger text-lead fs-5">{props.data["SFR ($\rm M_{\\odot}$\\yr)"]}</p>
+              <p className="text-secondary text-lead fs-5">{props.data["SFR ($\rm M_{\\odot}$\\yr)"]}</p>
             </div>
 
             <div className="w-100 me-2 mb-3">
               <h4 className="text-dark ">
                 <LatexComponent text="$Z_{\rm gas}$ ($Z_{\odot}$)" />
               </h4>
-              <p className="text-danger text-lead fs-5">{props.data["$Z_{\rm gas}$ ($Z_{\\odot}$)"]}</p>
+              <p className="text-secondary text-lead fs-5">{props.data["$Z_{\rm gas}$ ($Z_{\\odot}$)"]}</p>
             </div>
 
             <div className="w-100 me-2 mb-3">
               <h4 className="text-dark ">
                 <LatexComponent text="$t_{m}$ (Gyr)" />
               </h4>
-              <p className="text-danger text-lead fs-5">{props.data["$t_{m}$ (Gyr)"]}</p>
+              <p className="text-secondary text-lead fs-5">{props.data["$t_{m}$ (Gyr)"]}</p>
             </div>
           </div>
         </div>
