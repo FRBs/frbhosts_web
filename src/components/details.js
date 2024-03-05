@@ -9,9 +9,8 @@ const Details = (props) => {
   var modifiedUrl = originalUrl.replace("github.com", "raw.githubusercontent.com");
 
   // Links start
-  const declination = props.data["Host Decl."]
-  var decl = (declination.includes('-'))? declination : "+"+declination;
-  var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${decl}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
+  
+  var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
   var tns_link = `https://www.wis-tns.org/object/${props.data.FRB.split('FRB')[1]}`;
 
   // Remove "/blob" from the path
@@ -32,7 +31,7 @@ const Details = (props) => {
 
             <h4 className="text-dark mt-2">R.A./Decl (2000) </h4>
             <p className="text-danger text-lead fs-5">
-              {props.data["Host R.A."]}/{decl}
+              {props.data["Host R.A."]}/{props.data["Host Decl."]}
             </p>
 
             <h4 className="text-dark mt-2">Redshift</h4>
