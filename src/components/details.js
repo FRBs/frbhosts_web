@@ -1,10 +1,9 @@
 import React from "react";
 import LatexComponent from "./latex";
 
-<script type="text/javascript">
+<script>
 var decl = props.data["Host Decl."].includes('-')? props.data["Host Decl."] : "+"+props.data["Host Decl."];
-document.getElementById("declHolder").innerHTML = decl.toString();
-
+document.getElementById('declHolder').innerHTML = str;
 </script>
 
 const Details = (props) => {
@@ -41,7 +40,7 @@ const Details = (props) => {
             <h4 className="text-dark mt-2">Redshift</h4>
             <p className="text-secondary text-lead fs-5">{props.data.redshift}</p>
 
-            <h4 className="text-dark mt-2">Offset [arcsec]</h4>
+            <h4 className="text-dark mt-2">Offset (arcsec)</h4>
             <p className="text-secondary text-lead fs-5">{props.data["Offset ($\u0007rcsec$)"]}</p>
           </div>
           <div className="col-5">
