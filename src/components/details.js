@@ -10,7 +10,7 @@ const Details = (props) => {
 
   // Links start
 
-  var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${props.data["Host Decl."].includes('-') ? props.data["Host Decl."] : "+"+props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
+  var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${String(props.data["Host Decl."]).includes('-') ? props.data["Host Decl."] : "+"+props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
   var tns_link = `https://www.wis-tns.org/object/${props.data.FRB.split('FRB')[1]}`;
 
   // Remove "/blob" from the path
