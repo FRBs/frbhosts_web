@@ -6,7 +6,7 @@ const Details = (props) => {
   // Replace "github.com" with "raw.githubusercontent.com"
   var originalUrl = props.data.image;
   var modifiedUrl = originalUrl.replace("github.com", "raw.githubusercontent.com");
-  decl = props.data["Host Decl."].includes('-')? props.data["Host Decl."] : "+"+props.data["Host Decl."];
+  window.decl = props.data["Host Decl."].includes('-')? props.data["Host Decl."] : "+"+props.data["Host Decl."];
 
   // Links start
   
