@@ -31,7 +31,7 @@ const Details = (props) => {
 
             <h4 className="text-dark mt-2">R.A./Decl (2000) </h4>
             <p className="text-secondary text-lead fs-5">
-              {props.data["Host R.A."]}/{props.data["Host Decl."]}
+              {props.data["Host R.A."]}/{decl}
             </p>
 
             <h4 className="text-dark mt-2">Redshift</h4>
