@@ -331,7 +331,7 @@ const Main = () => {
                           <td>{rowData["SFR ($\rm M_{\\odot}$\\yr)"]}</td>
                           <td>{rowData["$Z_{\rm gas}$ ($Z_{\\odot}$)"]}</td>
                           <td>{rowData["$t_{m}$ (Gyr)"]}</td>
-                          <td>{rowData["$m_r$."]}</td>
+                          <td>{String.format("%.2f", rowData["$m_r$."])}</td>
                           <td>{rowData.redshift}</td>
                         </tr>
                       );
