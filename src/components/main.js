@@ -272,8 +272,8 @@ const Main = () => {
                     <th scope="col" onClick={() => handleSort("$t_{m}$ (Gyr)")}>
                       <LatexComponent text="$t_{m}$ (Gyr)" /> {sortBy === " $t_{m}$ (Gyr)" && <small>({sortDirection})</small>}
                     </th>
-                    <th scope="col" onClick={() => handleSort("$m_r$")}>
-                      <LatexComponent text="$m_r$" /> {sortBy === "$m_r$" && <small>({sortDirection})</small>}
+                    <th scope="col" onClick={() => handleSort("$m_r$.")}>
+                      <LatexComponent text="$m_r$" /> {sortBy === "$m_r$." && <small>({sortDirection})</small>}
                     </th>
                     <th scope="col" onClick={() => handleSort("Redshift")}>
                       Redshift {sortBy === "Redshift" && <small>({sortDirection})</small>}
@@ -293,7 +293,7 @@ const Main = () => {
                         String(e["SFR ($\rm M_{\\odot}$\\yr)"])?.includes(String(search)) ||
                         String(e["$Z_{\rm gas}$ ($Z_{\\odot}$)"])?.includes(String(search)) ||
                         String(e["$t_{m}$ (Gyr)"])?.includes(String(search)) ||
-                        String(e["$m_r$"])?.includes(String(search)) ||
+                        String(e["$m_r$."])?.includes(String(search)) ||
                         String(e.Redshift.includes(String(search)))
                     )
                     .map((ini, i) => {
@@ -306,7 +306,7 @@ const Main = () => {
                         "SFR ($\rm M_{\\odot}$\\yr)": ini["SFR ($\rm M_{\\odot}$\\yr)"],
                         "$Z_{\rm gas}$ ($Z_{\\odot}$)": ini["$Z_{\rm gas}$ ($Z_{\\odot}$)"],
                         "$t_{m}$ (Gyr)": ini["$t_{m}$ (Gyr)"],
-                        "$m_r$": ini["$m_r$"],
+                        "$m_r$.": ini["$m_r$."],
                         redshift: ini.Redshift,
                         image: ini.image_path,
                       };
@@ -331,7 +331,7 @@ const Main = () => {
                           <td>{rowData["SFR ($\rm M_{\\odot}$\\yr)"]}</td>
                           <td>{rowData["$Z_{\rm gas}$ ($Z_{\\odot}$)"]}</td>
                           <td>{rowData["$t_{m}$ (Gyr)"]}</td>
-                          <td>{rowData["$m_r$"]}</td>
+                          <td>{rowData["$m_r$."]}</td>
                           <td>{rowData.redshift}</td>
                         </tr>
                       );
