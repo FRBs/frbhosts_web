@@ -306,7 +306,7 @@ const Main = () => {
                         "SFR ($\rm M_{\\odot}$\\yr)": ini["SFR ($\rm M_{\\odot}$\\yr)"],
                         "$Z_{\rm gas}$ ($Z_{\\odot}$)": ini["$Z_{\rm gas}$ ($Z_{\\odot}$)"],
                         "$t_{m}$ (Gyr)": ini["$t_{m}$ (Gyr)"],
-                        "$m_r$.": ini["$m_r$."].toFixed(2),
+                        "$m_r$.": ini["$m_r$."],
                         redshift: ini.Redshift,
                         image: ini.image_path,
                       };
