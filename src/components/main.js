@@ -306,7 +306,7 @@ const Main = () => {
                         "SFR ($\rm M_{\\odot}$\\yr)": ini["SFR ($\rm M_{\\odot}$\\yr)"],
                         "$Z_{\rm gas}$ ($Z_{\\odot}$)": ini["$Z_{\rm gas}$ ($Z_{\\odot}$)"],
                         "$t_{m}$ (Gyr)": ini["$t_{m}$ (Gyr)"],
-                        "$m_r$.": ini["$m_r$."],
+                        "$m_r$.": ini["$m_r$."].toFixed(2),
                         redshift: ini.Redshift,
                         image: ini.image_path,
                       };
@@ -331,7 +331,7 @@ const Main = () => {
                           <td>{rowData["SFR ($\rm M_{\\odot}$\\yr)"]}</td>
                           <td>{rowData["$Z_{\rm gas}$ ($Z_{\\odot}$)"]}</td>
                           <td>{rowData["$t_{m}$ (Gyr)"]}</td>
-                          <td>{rowData["$m_r$."].toFixed(2)}</td>
+                          <td>{rowData["$m_r$."]}</td>
                           <td>{rowData.redshift}</td>
                         </tr>
                       );
