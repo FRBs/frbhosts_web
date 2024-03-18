@@ -293,7 +293,7 @@ const Main = () => {
                         String(e["SFR ($\rm M_{\\odot}$\\yr)"])?.includes(String(search)) ||
                         String(e["$Z_{\rm gas}$ ($Z_{\\odot}$)"])?.includes(String(search)) ||
                         String(e["$t_{m}$ (Gyr)"])?.includes(String(search)) ||
-                        String(e["$m_r$."])?.includes(String(search)) ||
+                        String(e["$m_r$."].toFixed(2))?.includes(String(search)) ||
                         String(e.Redshift.includes(String(search)))
                     )
                     .map((ini, i) => {
