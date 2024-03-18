@@ -326,10 +326,10 @@ const Main = () => {
                           <td>{rowData["Host R.A."]}</td>
                           <td>{rowData["Host Decl."]}</td>
 
-                          <td>{rowData["Offset ($\u0007rcsec$)"]}</td>
-                          <td>{rowData["$M_*$ ($\rm M_{\\odot}$)"]}</td>
+                          <td>{parseFloat(rowData["Offset ($\u0007rcsec$)"]).toFixed(3)}</td>
+                          <td>{parseFloat(rowData["$M_*$ ($\rm M_{\\odot}$)"]).toExponential()}</td>
                           <td>{rowData["SFR ($\rm M_{\\odot}$\\yr)"]}</td>
-                          <td>{rowData["$Z_{\rm gas}$ ($Z_{\\odot}$)"]}</td>
+                          <td>{parseFloat(rowData["$Z_{\rm gas}$ ($Z_{\\odot}$)"]).toFixed(3)}</td>
                           <td>{rowData["$t_{m}$ (Gyr)"]}</td>
                           <td>{parseFloat(rowData["$m_r$."]).toFixed(2)}</td>
                           <td>{rowData.redshift}</td>
