@@ -153,7 +153,8 @@ const Main = () => {
         .slice(pnum * 10 - 10, pnum * 10)
         .filter(
           (e) =>
-            e.FRB.includes(search) ||
+            e.FRB.toLowerCase().includes(search.toLowerCase()) ||
+            String(e.Redshift).includes(String(search)) ||
             String(e["Host R.A."])?.includes(String(search)) ||
             String(e["Host Decl."])?.includes(String(search)) ||
             String(e["Offset ($\u0007rcsec$)"])?.includes(String(search)) ||
@@ -208,10 +209,17 @@ const Main = () => {
           <div className="container bg-dark rounded p-3 my-3 ">
             <div className="text-light my-3">
               <p className="lead">
-                Welcome to the FRB Host Galaxy Catalog! Here you will find a complete and up-to-date listing of FRB host galaxies along with their inferred host galaxy properties. The data below is generated from JSON files produced via the <a href="https://github.com/FRBs/FRB">FRB git repo</a> and is intended to be a community-driven resource for the entire FRB community. If you have discovered a new FRB host, please open a pull request to add your FRB to the catalog.
+                Welcome to the FRB Host Galaxy Catalog! Here you will find a complete and up-to-date listing of FRB host galaxies along with their inferred host galaxy properties. The data below is
+                generated from JSON files produced via the <a href="https://github.com/FRBs/FRB">FRB git repo</a> and is intended to be a community-driven resource for the entire FRB community. If you
+                have discovered a new FRB host, please open a pull request to add your FRB to the catalog.
               </p>
               <p className="lead">
-                This page is maintained by the <a href="https://frb-f4.org/">Fast and Fortunate for FRB Follow-up</a> team. If you notice any issues or have suggestions for features you would like to see added, please open a git issue <a href="https://github.com/FRBs/frbhosts_web" target="_blank">here</a>.
+                This page is maintained by the <a href="https://frb-f4.org/">Fast and Fortunate for FRB Follow-up</a> team. If you notice any issues or have suggestions for features you would like to
+                see added, please open a git issue{" "}
+                <a href="https://github.com/FRBs/frbhosts_web" target="_blank">
+                  here
+                </a>
+                .
               </p>
             </div>
 
@@ -285,7 +293,8 @@ const Main = () => {
                     .slice(pnum * 10 - 10, pnum * 10)
                     .filter(
                       (e) =>
-                        e.FRB.includes(search) ||
+                        e.FRB.toLowerCase().includes(search.toLowerCase()) ||
+                        String(e.Redshift).includes(String(search)) ||
                         String(e["Host R.A."])?.includes(String(search)) ||
                         String(e["Host Decl."])?.includes(String(search)) ||
                         String(e["Offset ($\u0007rcsec$)"])?.includes(String(search)) ||
@@ -293,8 +302,7 @@ const Main = () => {
                         String(e["SFR ($\rm M_{\\odot}$\\yr)"])?.includes(String(search)) ||
                         String(e["$Z_{\rm gas}$ ($Z_{\\odot}$)"])?.includes(String(search)) ||
                         String(e["$t_{m}$ (Gyr)"])?.includes(String(search)) ||
-                        String(e["$m_r$."])?.includes(String(search)) ||
-                        String(e.Redshift.includes(String(search)))
+                        String(e["$m_r$."])?.includes(String(search))
                     )
                     .map((ini, i) => {
                       const rowData = {
@@ -349,3 +357,4 @@ const Main = () => {
 };
 
 export default Main;
+
