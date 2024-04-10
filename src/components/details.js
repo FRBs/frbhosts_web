@@ -12,6 +12,8 @@ const Details = (props) => {
 
   var link = `https://ps1images.stsci.edu/cgi-bin/ps1cutouts?pos=${props.data["Host R.A."]}${String(props.data["Host Decl."]).includes('-') ? props.data["Host Decl."] : "+"+props.data["Host Decl."]}&filter=color&filter=g&filter=r&filter=i&filter=z&filter=y&filetypes=stack&auxiliary=data&size=240&output_size=0&verbose=0&autoscale=99.500000&catlist=`;
   var tns_link = `https://www.wis-tns.org/object/${props.data.FRB.split('FRB')[1]}`;
+  var frb_host_json = `https://github.com/FRBs/FRB/blob/main/frb/data/Galaxies/20121102A/${props.data.FRB}_host.json`
+  var frb_json = `https://github.com/FRBs/FRB/blob/main/frb/data/FRBs/${props.data.FRB}.json`
 
   // Remove "/blob" from the path
   modifiedUrl = modifiedUrl.replace("/blob", "");
@@ -49,6 +51,17 @@ const Details = (props) => {
               </a>
               <a className="btn-danger  btn-lg btn rounded shadow w-100" href={link} target="_blank">
                 PanSTARRS
+              </a>
+              <a className="btn-info btn-lg btn rounded shadow me-2 w-100" href={tns_link} target="_blank">
+                TNS
+              </a>
+            </div>
+            <div className="w-100 pt-2 d-flex justify-content-between">
+              <a className="btn-dark btn-lg btn rounded shadow me-2 w-100" href={frb_json} target="_blank">
+                FRB JSON
+              </a>
+              <a className="btn-warning btn-lg btn rounded shadow w-100" href={frb_host_json} target="_blank">
+                FRB Host JSON
               </a>
             </div>
           </div>
